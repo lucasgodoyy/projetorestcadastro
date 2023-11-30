@@ -15,6 +15,8 @@
 	<description>Projeto API REST </description>
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.test.skip>true</maven.test.skip>
+		<packaging>jar</packaging>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -50,6 +52,12 @@
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -61,6 +69,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <version>2.1.2.RELEASE</version> <!-- Use a versão adequada do Spring Boot -->
 			</plugin>
 		</plugins>
 	</build>
